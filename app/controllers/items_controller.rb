@@ -18,10 +18,10 @@ class ItemsController < ApplicationController
     render partial: 'form'
   end
 
-  def creat
+  def create
     @item = @dept.items.new(item_params)
     if @item.save
-      redirect_to[@dept, @item]
+      redirect_to [@dept, @item]
     else
       render :new
     end
@@ -51,6 +51,6 @@ class ItemsController < ApplicationController
 
     def item_params
       params.require(:item).permit(:name, :description, :price)
-    end   
+    end
 
 end
