@@ -1,7 +1,7 @@
 <h1><%= @dept.name %> - <%= @item.name %></h1>
 <p><%= @item.description %> </p>
-<p> <%= @item.price %> </p>
+<p> $ <%= @item.price %> </p>
 <hr />
-<%= link_to 'Edit Item', edit_dept_item_path([@dept, @item]) %>
-<%= link_to 'Delete Item', [@dept, @item], method: :delete %>
-<%= link_to 'Back to Items', dept_items_path(@dept) %>
+<button><%= link_to 'Edit Item', edit_dept_item_path([@dept, @item]) %></button>
+<button><%= link_to 'Delete Item', [@dept, @item], method: :delete %></button>
+<button><%= link_to 'Back to Items', dept_items_path(@dept) %> </button>
